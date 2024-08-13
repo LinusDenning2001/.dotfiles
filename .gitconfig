@@ -1,0 +1,5 @@
+[user]
+	name = Linus Denning
+	email = Linus@Denning.nl
+[core]
+	editor = nvim
