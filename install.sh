@@ -15,6 +15,7 @@ function install {
 
 # Basics
 sudo snap neovim --classic
+install tree
 install firefox
 install git
 install make
