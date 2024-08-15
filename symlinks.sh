@@ -16,3 +16,4 @@ function link {
 link .gitconfig
 link .themes/
 link nvim .config/
+link .fonts/
