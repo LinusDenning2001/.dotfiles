@@ -3,4 +3,3 @@
 	email = Linus@Denning.nl
 [core]
 	editor = nvim
-	excludesFile = ~/.config/nvim/lazy-lock.json
