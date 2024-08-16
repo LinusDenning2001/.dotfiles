@@ -1,7 +1,3 @@
--- [[ keymaps and lazy install ]]
-
-require("config")
-
 -- [[ Setting options ]]
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
@@ -63,6 +59,10 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- [[ keymaps and lazy install ]]
+
+require("config")
 
 -- [[ Configure and install plugins ]]
 

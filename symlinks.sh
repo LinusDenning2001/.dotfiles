@@ -17,3 +17,9 @@ link .gitconfig
 link .themes/
 link nvim .config/
 link .fonts/
+link .themes/gtk-4.0/assets/ .config/gtk-4.0
+link .themes/gtk-4.0/gtk.css .config/gtk-4.0
+link .themes/gtk-4.0/thumbnail.png .config/gtk-4.0
+
+
+fc-cache -fv

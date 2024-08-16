@@ -5,7 +5,7 @@ sudo apt update
 function install {
 	which $1 &> /dev/null
 
-	if [$? -ne 0 ]; then
+	if [ $? != 0 ]; then
 		echo "Installing: ${1}..."
 		sudo apt install -y $1
 	else
@@ -14,7 +14,7 @@ function install {
 }
 
 # Basics
-sudo snap neovim --classic
+# sudo snap nvim --classic
 install tree
 install firefox
 install git
@@ -31,8 +31,9 @@ install gcc
 install Python3
 
 # aestetic
+install neofetch
 install sassc
-install gnome-tweeks
+install gnome-tweaks
 install gtk2-engines-murrine
 install gnome-shell-extension-manager
 # Extentions:
