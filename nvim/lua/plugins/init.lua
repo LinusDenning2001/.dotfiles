@@ -33,7 +33,6 @@ require("lazy").setup({
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
-			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
 			{ "j-hui/fidget.nvim", opts = {} },
 
 			-- Allows extra capabilities provided by nvim-cmp
@@ -209,6 +208,8 @@ require("lazy").setup({
 					},
 				},
 			}
+
+			require("lspconfig").pasls.setup({})
 
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
@@ -462,6 +463,7 @@ require("lazy").setup({
 		build = ":TSUpdate",
 		opts = {
 			ensure_installed = {
+				"pascal",
 				"bash",
 				"c",
 				"diff",
