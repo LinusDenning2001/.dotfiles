@@ -209,7 +209,7 @@ require("lazy").setup({
 				},
 			}
 
-			require("lspconfig").pasls.setup({})
+			require("lspconfig").pasls.setup({ cmd = { "/home/linus/fpc-3.2.0/lsp/standard/pasls.lpr" } })
 
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
