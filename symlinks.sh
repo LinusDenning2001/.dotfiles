@@ -3,7 +3,7 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 function link {
-	local TARGET="${HOME}/${2}${1}"
+	local TARGET="${HOME}/${2}$(basename $1)"
 
 	if [ -f $TARGET ] || [ -d $TARGET ]; then
 		echo "$TARGET already exists."
@@ -18,9 +18,8 @@ link .themes/
 link nvim .config/
 link .fonts/
 link .bash_aliases
-link .themes/gtk-4.0/assets/ .config/gtk-4.0
-link .themes/gtk-4.0/gtk.css .config/gtk-4.0
-link .themes/gtk-4.0/thumbnail.png .config/gtk-4.0
+link .themes/gtk-4.0/assets/ .config/gtk-4.0/
+link .themes/gtk-4.0/gtk.css .config/gtk-4.0/
+link .themes/gtk-4.0/thumbnail.png .config/gtk-4.0/
 
-
-fc-cache -fv
+fc-cache -f
