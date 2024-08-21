@@ -1,7 +1,0 @@
-* Search word (n for next, shift for previous)
-[c]jange [i]n [w]ord
-:%s/Thing/OtherThing/g([c]onformation)
-[v]isualy highlight [i]n [w]ord
-"3p (put third thing in registry)
-qh (record at h)
-
