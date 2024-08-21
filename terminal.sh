@@ -29,5 +29,5 @@ function add {
 ID=$(create Gruvbox)
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-dconf load $DCONFDIR/:$ID/ < $SCRIPT_DIR/terminal.config
+dconf load $DCONFDIR/:$ID/ < $SCRIPT_DIR/config/terminal.config
 echo Gruvbox terminal config loaded
