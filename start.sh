@@ -12,3 +12,5 @@ run extensions.sh
 run symlinks.sh
 run terminal.sh
 run aesthetic.sh
+
+nvim

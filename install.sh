@@ -28,7 +28,7 @@ install gcc
 #	Pascal
 # wget http://downloads.freepascal.org/fpc/dist/3.2.2/x86_64-linux/fpc-3.2.2.x86_64-linux.tar
 #	Python
-install Python3
+# install Python3
 
 # aestetic
 install neofetch

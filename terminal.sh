@@ -2,7 +2,7 @@
 
 if [[ $(dconf dump / | grep visible-name | grep Gruvbox) != "" ]]; then
 	echo Gruvbox terminal profile already exists
-	exit 17
+	return 17
 fi
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
