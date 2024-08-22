@@ -5,6 +5,7 @@ if [[ $(dconf dump / | grep visible-name | grep Gruvbox) != "" ]]; then
 	exit 17
 fi
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 DCONFDIR=/org/gnome/terminal/legacy/profiles:
 
 function create {
@@ -22,12 +23,7 @@ function create {
     echo $PROFILE_ID
 }
 
-function add {
-	dconf write $DCONFDIR/:$1/$2 $3
-}
-
 ID=$(create Gruvbox)
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 dconf load $DCONFDIR/:$ID/ < $SCRIPT_DIR/config/terminal.config
 echo Gruvbox terminal config loaded
