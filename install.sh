@@ -36,6 +36,3 @@ install sassc
 install gnome-tweaks
 install gtk2-engines-murrine
 install gnome-shell-extension-manager
-# Extentions:
-# 	User Themes
-# 	Blur my Shell 
