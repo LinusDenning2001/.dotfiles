@@ -1,16 +1,18 @@
 #!/bin/bash
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPTDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# creats checks if symlink already exists, if not creat one
 function link {
 	local TARGET="${HOME}/${2}$(basename $1)"
 
 	if [ -f $TARGET ] || [ -d $TARGET ]; then
 		echo "$TARGET already exists."
-	else
-		ln -s "${SCRIPT_DIR}/${1}" "${HOME}/${2}"
-		echo "$TARGET link created"
+		return
 	fi
+
+	ln -s "${SCRIPTDIR}/${1}" "${HOME}/${2}"
+	echo "$TARGET link created"
 }
 
 link .gitconfig

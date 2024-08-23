@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# checks if Gruvbox profile already exists
 if [[ $(dconf dump / | grep visible-name | grep Gruvbox) != "" ]]; then
 	echo Gruvbox terminal profile already exists
 	return 17
@@ -8,6 +9,7 @@ fi
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 DCONFDIR=/org/gnome/terminal/legacy/profiles:
 
+# creats Gruvbox profile by editing schema list
 function create {
     local PROFILE_IDS=($(dconf list $DCONFDIR/ | grep ^: |\
                         sed 's/\///g' | sed 's/://g'))
@@ -25,5 +27,6 @@ function create {
 
 ID=$(create Gruvbox)
 
+# loads profile from config
 dconf load $DCONFDIR/:$ID/ < $SCRIPT_DIR/config/terminal.config
 echo Gruvbox terminal config loaded

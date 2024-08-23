@@ -1,20 +1,22 @@
 #!/bin/bash
 
-sudo apt update
+sudo apt update &> /dev/null
+echo applications updated
 
+# checks if program exists, if not it installs it
 function install {
 	which $1 &> /dev/null
 
 	if [ $? != 0 ]; then
-		echo "Installing: ${1}..."
-		sudo apt install -y $1
+		sudo apt install -y $1 &> /dev/null
+		echo "Installed: ${1}"
 	else
 		echo "Already installed: ${1}"
 	fi
 }
 
 # Basics
-# sudo snap nvim --classic
+sudo snap install nvim --classic 1> /dev/null
 install tree
 install firefox
 install git
@@ -25,10 +27,6 @@ install ripgrep
 # Compilers
 #	C
 install gcc
-#	Pascal
-# wget http://downloads.freepascal.org/fpc/dist/3.2.2/x86_64-linux/fpc-3.2.2.x86_64-linux.tar
-#	Python
-# install Python3
 
 # aestetic
 install neofetch
