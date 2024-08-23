@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPTDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPTDIR=$1
 DCONFDIR=/org/gnome/shell/extensions
 
 function set {

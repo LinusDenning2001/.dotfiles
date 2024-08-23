@@ -4,8 +4,8 @@ SCRIPTDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # make script runable before running
 function run {
-	chmod 775 $SCRIPTDIR/$1
-	source $SCRIPTDIR/$1
+	chmod 775 $SCRIPTDIR/scripts/$1
+	source $SCRIPTDIR/scripts/$1 $SCRIPTDIR
 }
 
 # run all scripts

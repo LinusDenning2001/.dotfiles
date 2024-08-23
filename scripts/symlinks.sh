@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPTDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPTDIR=$1
 
 # creats checks if symlink already exists, if not creat one
 function link {

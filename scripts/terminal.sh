@@ -6,7 +6,7 @@ if [[ $(dconf dump / | grep visible-name | grep Gruvbox) != "" ]]; then
 	return 17
 fi
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=$1
 DCONFDIR=/org/gnome/terminal/legacy/profiles:
 
 # creats Gruvbox profile by editing schema list
