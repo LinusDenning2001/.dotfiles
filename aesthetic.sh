@@ -1,5 +1,8 @@
 #!/bin/bash
 
+SCRIPTDIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+DCONFDIR=/org/gnome/shell/extensions
+
 function set {
 	gsettings set org.gnome.$1 $2 $3 &> /dev/null
 	if [ $? -ne 0 ]; then
@@ -20,9 +23,9 @@ set desktop.interface icon-theme "Yaru-olive-dark"
 echo Aesthetic: set theme
 
 # extentions
-#  TODO: set up extensions
-# L user-theme
-# L blur-my-shell
+dconf load $DCONFDIR/user-theme/ < $SCRIPTDIR/config/user-theme.config
+dconf load $DCONFDIR/blur-my-shell/ < $SCRIPTDIR/config/blur-my-shell.config
+echo Aesthetic: set extensions
 
 # set RTC if windows is installed
 read -p $'Are you running Windows alongside Linux? [y/n]\n' -n 1 -r
