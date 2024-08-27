@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO:
+# fix addextension
+
 # function checks if extension already exists, if not it installs it
 function addextension {
     gnome-extensions list | grep $(basename ${1::-2}) &> /dev/null
