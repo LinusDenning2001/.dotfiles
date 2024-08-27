@@ -11,9 +11,9 @@ function set {
 }
 
 # set background
-set desktop.background picture-uri file:///home/linus/.themes/gruv%20LINUX.png
-set desktop.background picture-uri-dark file:///home/linus/.themes/gruv%20LINUX.png
-set desktop.screensaver picture-uri file:///home/linus/.themes/gruv%20LINUX.png
+set desktop.background picture-uri file:///home/linus/.themes/gruv%20LINUX.jpg
+set desktop.background picture-uri-dark file:///home/linus/.themes/gruv%20LINUX.jpg
+set desktop.screensaver picture-uri file:///home/linus/.themes/gruv%20LINUX.jpg
 echo Aesthetic: set background
 
 # set theme
