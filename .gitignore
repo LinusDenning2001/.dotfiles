@@ -1,2 +1,4 @@
 *.json
 *.uuid
+
+nvim/lsp
