@@ -1,6 +1,8 @@
 [submodule "nvim/lsp/Lazarus"]
 	path = nvim/lsp/Lazarus
 	url = https://gitlab.com/freepascal.org/lazarus/lazarus.git
+	ignore = dirty
 [submodule "nvim/lsp/pascal-language-server"]
 	path = nvim/lsp/pascal-language-server
 	url = git@github.com:genericptr/pascal-language-server.git
+	ignore = dirty
