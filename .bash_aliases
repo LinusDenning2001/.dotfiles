@@ -1,10 +1,10 @@
-PATH=$PATH:/home/linus/fpc-3.2.0/bin/
-PATH=$PATH:/home/linus/fpc-3.2.0/lsp/
+PATH=$PATH:$HOME/fpc/fpc-3.2.2/bin/
 
 alias vim='nvim'
 alias status='clear; git status'
 alias doc='evince'
 
-# pascal lsp
-export FPCDIR='/home/linus/fpc-3.2.0/'      # FPC source directory (This is the only required option for the server to work).
-export PP='/home/linus/fpc-3.2.0/bin/ppcx64' # Path to the Free Pascal compiler executable.
+# PATH to pascal lsp
+PATH=$PATH:$HOME/.dotfiles/nvim/lsp/pascal-language-server/src/standard/pasls
+#	FPC source directory (to compile lsp).
+export FPCDIR='${HOME}/fpc/fpc-3.2.2/'
