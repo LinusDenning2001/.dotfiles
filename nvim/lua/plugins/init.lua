@@ -9,6 +9,8 @@ require("lazy").setup({
 
 	require("config.theme"),
 
+	require("plugins.autoclose"),
+
 	-- TODO: Turn LSP config into files
 
 	-- LSP Plugins
