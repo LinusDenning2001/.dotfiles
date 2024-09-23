@@ -3,7 +3,7 @@ PATH=$PATH:$HOME/fpc/fpc-3.2.2/bin/
 alias vim='nvim'
 alias status='clear; git status'
 alias doc='evince'
-alias e='exit'
+alias :q='exit'
 
 # PATH to pascal lsp
 PATH=$PATH:$HOME/.dotfiles/nvim/lsp/pascal-language-server/src/standard/
