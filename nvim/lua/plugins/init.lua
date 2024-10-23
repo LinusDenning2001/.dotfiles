@@ -185,7 +185,7 @@ require("lazy").setup({
 
 			require("lspconfig").pasls.setup({
 				cmd = { "pasls" },
-				capabilities = { vim.tbl_deep_extend("force", {}, capabilities, {}) },
+				capabilities = { capabilities },
 			})
 
 			-- Ensure the servers and tools above are installed
