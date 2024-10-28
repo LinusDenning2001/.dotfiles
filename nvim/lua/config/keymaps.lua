@@ -30,6 +30,6 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 
 -- save and run file
 vim.keymap.set("n", "<C-s>", function()
-	vim.cmd.w()
+	vim.cmd.wa()
 	vim.cmd.make()
 end, { desc = "Save and run file" })
