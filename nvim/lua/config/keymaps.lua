@@ -28,8 +28,22 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- save and run file
+-- save and make all
 vim.keymap.set("n", "<C-s>", function()
 	vim.cmd.wa()
 	vim.cmd.make()
-end, { desc = "Save and run file" })
+end, { desc = "Save and make" })
+
+vim.api.nvim_create_user_command("Setsubmake", function(input)
+	vim.g.submake = tostring(input.fargs[1])
+end, { nargs = 1 })
+
+-- save and make specific
+vim.keymap.set("n", "<C-x>", function()
+	if vim.g.submake == nil then
+		vim.print("Submake command not found, set value with :Setsubmake")
+		return
+	end
+	vim.cmd.wa()
+	vim.cmd.make(vim.g.submake)
+end, { desc = "Save and make subprocess" })
